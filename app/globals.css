@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,800;1,900&family=Oswald:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #050505;
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Montserrat', 'Oswald', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1e27;
+}
+
+/* Neon glow utilities */
+.glow-red {
+  box-shadow: 0 0 25px rgba(255, 30, 39, 0.4);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 45px rgba(255, 30, 39, 0.6);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px rgba(0, 245, 160, 0.35);
+}
+
+.glow-text-red {
+  text-shadow: 0 0 15px rgba(255, 30, 39, 0.7);
+}
+
+/* Glassmorphic cards */
+.glass-panel {
+  background: rgba(18, 18, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(23, 23, 26, 0.9);
+  border-color: rgba(255, 30, 39, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 30, 39, 0.2);
+}
+
+/* Subtle grid mesh background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(255, 30, 39, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
