@@ -114,7 +114,7 @@ const ACTIVITIES: Activity[] = [
       "Independent Climate Control & Queue Stand",
     ],
     image:
-      "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80",
+      "/images/Private Snooker Suite.jpg",
   },
   {
     id: "ps5-vip",
@@ -153,7 +153,7 @@ const ACTIVITIES: Activity[] = [
       "Precision Ashwood Cue Sticks Provided",
     ],
     image:
-      "https://images.unsplash.com/photo-1615671524827-c1fe3973b648?auto=format&fit=crop&w=800&q=80",
+      "/images/Snooker (Main Arena).jpg",
   },
   {
     id: "american-pool",
@@ -172,7 +172,7 @@ const ACTIVITIES: Activity[] = [
       "Spacious Stance Room Around All Pockets",
     ],
     image:
-      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80",
+      "/images/American Pool.jpg",
   },
   {
     id: "table-tennis",
@@ -210,7 +210,7 @@ const ACTIVITIES: Activity[] = [
       "Dual Side Ball Returns & Score Sliders",
     ],
     image:
-      "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=800&q=80",
+      "/images/Foosball Championship.jpg",
   },
   {
     id: "carrom-lounge",
@@ -229,7 +229,7 @@ const ACTIVITIES: Activity[] = [
       "Dedicated Soft Glare Spotlight",
     ],
     image:
-      "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=800&q=80",
+      "/images/Carrom Lounge.jpg",
   },
 ];
 
@@ -241,7 +241,7 @@ const FOOD_ITEMS: FoodItem[] = [
     category: "Burgers",
     price: 690,
     description: "Dual 100% prime beef patties, melted cheddar, caramelized onions, house secret sauce in a toasted brioche bun.",
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80",
+    image: "/images/Club 24 Double Smash Beef Burger.jpg",
     tag: "Chef's Special",
   },
   {
@@ -250,7 +250,7 @@ const FOOD_ITEMS: FoodItem[] = [
     category: "Burgers",
     price: 590,
     description: "Crispy battered chicken fillet, spicy chipotle mayo, iceberg lettuce, served hot & crispy with seasoning.",
-    image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80",
+    image: "/images/Thunder Zinger Crunch Burger.jpg",
     spicy: true,
   },
   {
@@ -268,7 +268,7 @@ const FOOD_ITEMS: FoodItem[] = [
     category: "Burgers",
     price: 620,
     description: "Crunchy breaded chicken fillet, melted pepper jack cheese, crispy fried jalapeño slices, and creamy sriracha mayo in a warm brioche bun.",
-    image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=800&q=80",
+    image: "/images/Crispy Jalapeño Melt Burger.jpg",
     spicy: true,
   },
   {
@@ -277,7 +277,7 @@ const FOOD_ITEMS: FoodItem[] = [
     category: "Loaded Fries",
     price: 550,
     description: "Crispy shoestring fries drenched in warm liquid cheddar, jalapenos, minced spiced beef, and signature dynamite glaze.",
-    image: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80",
+    image: "/images/Loaded Cheesy Dynamite Fries.jpg",
     tag: "Crowd Favorite",
   },
   {
@@ -286,7 +286,7 @@ const FOOD_ITEMS: FoodItem[] = [
     category: "Loaded Fries",
     price: 520,
     description: "Golden fries baked with mozzarella, marinara sauce, pepperoni slices, olives, and oregano herb seasoning.",
-    image: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80",
+    image: "/images/Supreme Pizza Fries.jpg",
   },
   {
     id: "hot-wings",
@@ -311,7 +311,7 @@ const FOOD_ITEMS: FoodItem[] = [
     category: "Drinks & Coffee",
     price: 380,
     description: "Zesty blue curacao, freshly squeezed lime, crushed ice, mint sprigs, topped with bubbling soda.",
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/Electric Blue Lagoon Mocktail.jpg",
     tag: "Signature Drink",
   },
   {
@@ -328,31 +328,37 @@ const FOOD_ITEMS: FoodItem[] = [
     category: "Drinks & Coffee",
     price: 320,
     description: "Blended fresh mountain mint, black salt, fresh lemon juice, and crushed crystal ice for instant hydration.",
-    image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=400&q=80",
+    image: "/images/Fresh Mint & Ice Cooler.jpg",
   },
 ];
+
+type BookingServiceType = "instant" | "birthday" | "corporate" | "vip";
 
 // Experience Pillars
 const EXPERIENCE_PILLARS = [
   {
+    id: "instant" as BookingServiceType,
     title: "Instant Table Reservation",
     description: "Zero waiting lines. Pre-book your favorite snooker table, PS5 room, or racing rig in seconds via instant WhatsApp confirmation.",
     icon: Calendar,
     badge: "Fast Track",
   },
   {
+    id: "birthday" as BookingServiceType,
     title: "Squad & Birthday Packages",
     description: "Turn your celebration into an epic tournament with custom party packages, private VIP lounge floor access, and combo meal platters.",
     icon: Flame,
     badge: "Party Time",
   },
   {
+    id: "corporate" as BookingServiceType,
     title: "Corporate Tournaments & Events",
     description: "Host team-building sports nights, community esports brackets, or brand launches with dedicated event hosts and live scoreboards.",
     icon: Trophy,
     badge: "Team Building",
   },
   {
+    id: "vip" as BookingServiceType,
     title: "Club 24 VIP Membership",
     description: "Enjoy priority reservation privileges, exclusive off-peak hourly discounts, members-only tournaments, and complimentary café perks.",
     icon: Award,
@@ -418,6 +424,7 @@ export default function Club24LandingPage() {
 
   // Booking Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [serviceType, setServiceType] = useState<BookingServiceType>("instant");
   const [selectedActivityId, setSelectedActivityId] = useState<string>("racing-simulator");
   const [formData, setFormData] = useState({
     name: "",
@@ -428,6 +435,20 @@ export default function Club24LandingPage() {
     players: "2",
     duration: "1",
     specialRequests: "",
+
+    // Birthday specific
+    groupSize: "10-20 Guests",
+    packageTier: "Pro Party Package (Games + Smash Burgers + Drinks)",
+
+    // Corporate specific
+    companyName: "",
+    attendeeCount: "25-50 People",
+    eventDuration: "Half-Day (3-4 Hours)",
+    preferredGames: "Snooker & Pool Tournament",
+
+    // VIP specific
+    membershipPlan: "Gold Cue Pass (15% Off Off-Peak + Priority Booking)",
+    primaryGame: "Snooker & Pool",
   });
   const [bookingSuccess, setBookingSuccess] = useState(false);
 
@@ -452,8 +473,13 @@ export default function Club24LandingPage() {
       ? FOOD_ITEMS
       : FOOD_ITEMS.filter((item) => item.category === foodCategory);
 
-  // Modal open handler with activity pre-selection
-  const handleOpenBooking = (activityTitle?: string, activityId?: string) => {
+  // Modal open handler with activity / service pre-selection
+  const handleOpenBooking = (
+    activityTitle?: string,
+    activityId?: string,
+    type: BookingServiceType = "instant"
+  ) => {
+    setServiceType(type);
     if (activityTitle) {
       setFormData((prev) => ({ ...prev, activity: activityTitle }));
     }
@@ -468,24 +494,83 @@ export default function Club24LandingPage() {
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const selectedAct = ACTIVITIES.find((a) => a.title === formData.activity);
-    const hourlyRate = selectedAct ? selectedAct.price : 800;
-    const estTotal = hourlyRate * Number(formData.duration || 1);
+    let messageLines: string[] = [];
 
-    // Build the formatted WhatsApp message
-    const message = `Hi Club 24! I want to reserve a table/slot:\n\n` +
-      `🎮 Game/Facility: ${formData.activity}\n` +
-      `👤 Name: ${formData.name}\n` +
-      `📞 Phone: ${formData.phone}\n` +
-      `📅 Date: ${formData.date}\n` +
-      `⏰ Time Slot: ${formData.time}\n` +
-      `👥 Number of Players: ${formData.players}\n` +
-      `⏳ Duration: ${formData.duration} hour(s)\n` +
-      `💰 Est. Rate: Rs. ${estTotal.toLocaleString()}\n` +
-      (formData.specialRequests ? `📝 Special Request: ${formData.specialRequests}\n` : "") +
-      `\nPlease confirm slot availability. Thank you!`;
+    if (serviceType === "instant") {
+      const selectedAct = ACTIVITIES.find((a) => a.title === formData.activity);
+      const hourlyRate = selectedAct ? selectedAct.price : 800;
+      const estTotal = hourlyRate * Number(formData.duration || 1);
 
-    const encodedMessage = encodeURIComponent(message);
+      messageLines = [
+        "Hi Club 24! I want to reserve a table/slot:",
+        "",
+        "- Service: Instant Table Reservation",
+        `- Game/Facility: ${formData.activity}`,
+        `- Name: ${formData.name}`,
+        `- Phone: ${formData.phone}`,
+        `- Date: ${formData.date}`,
+        `- Time Slot: ${formData.time}`,
+        `- Players: ${formData.players}`,
+        `- Duration: ${formData.duration} hour(s)`,
+        `- Est. Rate: Rs. ${estTotal.toLocaleString()}`,
+        formData.specialRequests ? `- Special Request: ${formData.specialRequests}` : "",
+        "",
+        "Please confirm slot availability. Thank you!",
+      ];
+    } else if (serviceType === "birthday") {
+      messageLines = [
+        "Hi Club 24! I want to inquire about a Squad & Birthday Package:",
+        "",
+        "- Service: Squad & Birthday Packages",
+        `- Name: ${formData.name}`,
+        `- Phone: ${formData.phone}`,
+        `- Group Size: ${formData.groupSize}`,
+        `- Package Tier: ${formData.packageTier}`,
+        `- Preferred Date: ${formData.date}`,
+        `- Preferred Time: ${formData.time}`,
+        formData.specialRequests ? `- Setup Notes: ${formData.specialRequests}` : "",
+        "",
+        "Please send package details & pricing. Thank you!",
+      ];
+    } else if (serviceType === "corporate") {
+      messageLines = [
+        "Hi Club 24! I want to inquire about hosting a Corporate Event / Tournament:",
+        "",
+        "- Service: Corporate Tournaments & Events",
+        `- Name: ${formData.name}`,
+        `- Phone: ${formData.phone}`,
+        `- Company Name: ${formData.companyName}`,
+        `- Attendee Count: ${formData.attendeeCount}`,
+        `- Event Duration: ${formData.eventDuration}`,
+        `- Preferred Games: ${formData.preferredGames}`,
+        `- Proposed Date: ${formData.date}`,
+        formData.specialRequests ? `- Event Notes: ${formData.specialRequests}` : "",
+        "",
+        "Please provide a custom event proposal & quotation. Thank you!",
+      ];
+    } else if (serviceType === "vip") {
+      messageLines = [
+        "Hi Club 24! I want to apply for VIP Membership:",
+        "",
+        "- Service: Club 24 VIP Membership",
+        `- Name: ${formData.name}`,
+        `- Phone: ${formData.phone}`,
+        `- Membership Plan: ${formData.membershipPlan}`,
+        `- Primary Game: ${formData.primaryGame}`,
+        `- Preferred Start Date: ${formData.date}`,
+        formData.specialRequests ? `- Member Notes: ${formData.specialRequests}` : "",
+        "",
+        "Please guide me through membership registration & perks. Thank you!",
+      ];
+    }
+
+    const rawMessage = messageLines
+      .filter(Boolean)
+      .join("\n")
+      .replace(/[\u2013\u2014]/g, "-")
+      .replace(/\u00A0/g, " ");
+
+    const encodedMessage = encodeURIComponent(rawMessage);
     const whatsappUrl = `https://wa.me/923052201777?text=${encodedMessage}`;
 
     // Mark success state and open WhatsApp in a new tab
@@ -1072,7 +1157,7 @@ export default function Club24LandingPage() {
             {/* Promo Banner / Image (4 cols) */}
             <div className="lg:col-span-4 relative rounded-2xl overflow-hidden border border-white/10 group min-h-[350px]">
               <Image
-                src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+                src="/images/Club 24 Double Smash Beef Burger.jpg"
                 alt="Club 24 Gourmet Burgers & Hot Meals"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -1190,7 +1275,7 @@ export default function Club24LandingPage() {
                   </div>
 
                   <button
-                    onClick={() => handleOpenBooking(pillar.title)}
+                    onClick={() => handleOpenBooking(undefined, undefined, pillar.id)}
                     className="mt-6 text-xs font-bold text-red-400 group-hover:text-white flex items-center gap-1.5 transition-colors"
                   >
                     <span>Inquire Now</span>
@@ -1606,12 +1691,15 @@ export default function Club24LandingPage() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-start justify-between pb-4 border-b border-white/10 mb-6">
+            <div className="flex items-start justify-between pb-4 border-b border-white/10 mb-4">
               <div>
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF1E27] animate-ping"></span>
                   <h3 className="text-xl font-black uppercase text-white tracking-tight">
-                    Instant Slot Reservation
+                    {serviceType === "instant" && "Instant Table Reservation"}
+                    {serviceType === "birthday" && "Squad & Birthday Packages"}
+                    {serviceType === "corporate" && "Corporate Tournaments & Events"}
+                    {serviceType === "vip" && "Club 24 VIP Membership"}
                   </h3>
                 </div>
                 <p className="text-xs text-zinc-400 mt-1">
@@ -1626,6 +1714,29 @@ export default function Club24LandingPage() {
               </button>
             </div>
 
+            {/* Service Type Switcher Tabs */}
+            <div className="flex gap-1 bg-zinc-900/90 p-1 rounded-xl border border-white/10 mb-5 overflow-x-auto">
+              {[
+                { id: "instant", label: "Table Reservation" },
+                { id: "birthday", label: "Squad & Birthday" },
+                { id: "corporate", label: "Corporate Event" },
+                { id: "vip", label: "VIP Membership" },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setServiceType(tab.id as BookingServiceType)}
+                  className={`flex-1 py-1.5 px-2 rounded-lg text-[10px] sm:text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${
+                    serviceType === tab.id
+                      ? "bg-[#FF1E27] text-white shadow-md"
+                      : "text-zinc-400 hover:text-white"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
             {bookingSuccess ? (
               /* Success State */
               <div className="py-8 text-center flex flex-col items-center">
@@ -1636,7 +1747,7 @@ export default function Club24LandingPage() {
                   Redirecting to WhatsApp...
                 </h4>
                 <p className="text-xs text-zinc-400 max-w-xs mb-6">
-                  Your reservation details have been generated. Click below if WhatsApp didn&apos;t launch automatically.
+                  Your inquiry details have been generated. Click below if WhatsApp didn&apos;t launch automatically.
                 </p>
                 <button
                   onClick={() => setIsModalOpen(false)}
@@ -1678,102 +1789,353 @@ export default function Club24LandingPage() {
                   />
                 </div>
 
-                {/* Activity Dropdown */}
-                <div>
-                  <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
-                    Select Game / Activity *
-                  </label>
-                  <select
-                    value={formData.activity}
-                    onChange={(e) => setFormData({ ...formData, activity: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27] transition-colors"
-                  >
-                    {ACTIVITIES.map((act) => (
-                      <option key={act.id} value={act.title} className="bg-zinc-900 text-white">
-                        {act.title} — Rs. {act.price}/hr
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                {/* DYNAMIC FORM FIELDS ACCORDING TO SERVICE TYPE */}
+                {serviceType === "instant" && (
+                  <>
+                    {/* Activity Dropdown */}
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                        Select Game / Activity *
+                      </label>
+                      <select
+                        value={formData.activity}
+                        onChange={(e) => setFormData({ ...formData, activity: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27] transition-colors"
+                      >
+                        {ACTIVITIES.map((act) => (
+                          <option key={act.id} value={act.title} className="bg-zinc-900 text-white">
+                            {act.title} — Rs. {act.price}/hr
+                          </option>
+                        ))}
+                      </select>
+                    </div>
 
-                {/* Date & Time Row */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
-                      Date *
-                    </label>
-                    <input
-                      type="date"
-                      required
-                      value={formData.date}
-                      onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
-                    />
-                  </div>
+                    {/* Date & Time Row */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Date *
+                        </label>
+                        <input
+                          type="date"
+                          required
+                          value={formData.date}
+                          onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        />
+                      </div>
 
-                  <div>
-                    <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
-                      Time Slot *
-                    </label>
-                    <input
-                      type="time"
-                      required
-                      value={formData.time}
-                      onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
-                    />
-                  </div>
-                </div>
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Time Slot *
+                        </label>
+                        <input
+                          type="time"
+                          required
+                          value={formData.time}
+                          onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        />
+                      </div>
+                    </div>
 
-                {/* Players & Duration */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
-                      Players
-                    </label>
-                    <select
-                      value={formData.players}
-                      onChange={(e) => setFormData({ ...formData, players: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
-                    >
-                      <option value="1">1 Player</option>
-                      <option value="2">2 Players</option>
-                      <option value="3-4">3 - 4 Players</option>
-                      <option value="5-8">5 - 8 Players</option>
-                      <option value="8+">8+ Players (Squad)</option>
-                    </select>
-                  </div>
+                    {/* Players & Duration */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Players
+                        </label>
+                        <select
+                          value={formData.players}
+                          onChange={(e) => setFormData({ ...formData, players: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="1">1 Player</option>
+                          <option value="2">2 Players</option>
+                          <option value="3-4">3 - 4 Players</option>
+                          <option value="5-8">5 - 8 Players</option>
+                          <option value="8+">8+ Players (Squad)</option>
+                        </select>
+                      </div>
 
-                  <div>
-                    <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
-                      Duration
-                    </label>
-                    <select
-                      value={formData.duration}
-                      onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
-                    >
-                      <option value="1">1 Hour</option>
-                      <option value="2">2 Hours</option>
-                      <option value="3">3 Hours</option>
-                      <option value="4+">4+ Hours</option>
-                    </select>
-                  </div>
-                </div>
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Duration
+                        </label>
+                        <select
+                          value={formData.duration}
+                          onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="1">1 Hour</option>
+                          <option value="2">2 Hours</option>
+                          <option value="3">3 Hours</option>
+                          <option value="4+">4+ Hours</option>
+                        </select>
+                      </div>
+                    </div>
 
-                {/* Special Requests */}
-                <div>
-                  <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
-                    Special Requests / In-Room Café Order (Optional)
-                  </label>
-                  <textarea
-                    rows={2}
-                    placeholder="e.g. VIP room setup, order 2 smash burgers upon arrival..."
-                    value={formData.specialRequests}
-                    onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#FF1E27] resize-none"
-                  ></textarea>
-                </div>
+                    {/* Special Requests */}
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                        Special Requests / In-Room Café Order (Optional)
+                      </label>
+                      <textarea
+                        rows={2}
+                        placeholder="e.g. VIP room setup, order 2 smash burgers upon arrival..."
+                        value={formData.specialRequests}
+                        onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
+                        className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#FF1E27] resize-none"
+                      ></textarea>
+                    </div>
+                  </>
+                )}
+
+                {serviceType === "birthday" && (
+                  <>
+                    {/* Group Size & Package Tier */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Group Size *
+                        </label>
+                        <select
+                          value={formData.groupSize}
+                          onChange={(e) => setFormData({ ...formData, groupSize: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="5-10 Guests">5 - 10 Guests</option>
+                          <option value="10-20 Guests">10 - 20 Guests</option>
+                          <option value="20-30 Guests">20 - 30 Guests</option>
+                          <option value="30+ Guests (Full Floor)">30+ Guests (Full Floor)</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Package Tier *
+                        </label>
+                        <select
+                          value={formData.packageTier}
+                          onChange={(e) => setFormData({ ...formData, packageTier: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="Rookie Squad Package (Games + Soft Drinks)">Rookie Squad Package (Games + Drinks)</option>
+                          <option value="Pro Party Package (Games + Smash Burgers + Drinks)">Pro Party Package (Burgers + Games)</option>
+                          <option value="VIP Floor Takeover (All Access + Full Gourmet Catering)">VIP Floor Takeover (All Access)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Preferred Date & Time */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Preferred Date *
+                        </label>
+                        <input
+                          type="date"
+                          required
+                          value={formData.date}
+                          onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Preferred Time *
+                        </label>
+                        <input
+                          type="time"
+                          required
+                          value={formData.time}
+                          onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Setup Notes */}
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                        Party Setup Notes &amp; Requests (Optional)
+                      </label>
+                      <textarea
+                        rows={2}
+                        placeholder="e.g. Cake cutting table setup, custom music playlist..."
+                        value={formData.specialRequests}
+                        onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
+                        className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#FF1E27] resize-none"
+                      ></textarea>
+                    </div>
+                  </>
+                )}
+
+                {serviceType === "corporate" && (
+                  <>
+                    {/* Company Name */}
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                        Company / Organization Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="e.g. Acme Corp / Tech Solutions"
+                        value={formData.companyName}
+                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#FF1E27]"
+                      />
+                    </div>
+
+                    {/* Attendee Count & Event Duration */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Attendee Count *
+                        </label>
+                        <select
+                          value={formData.attendeeCount}
+                          onChange={(e) => setFormData({ ...formData, attendeeCount: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="10-25 People">10 - 25 People</option>
+                          <option value="25-50 People">25 - 50 People</option>
+                          <option value="50-100 People">50 - 100 People</option>
+                          <option value="100+ People (Full Arena)">100+ People (Full Arena)</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Event Duration *
+                        </label>
+                        <select
+                          value={formData.eventDuration}
+                          onChange={(e) => setFormData({ ...formData, eventDuration: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="Half-Day (3-4 Hours)">Half-Day (3-4 Hours)</option>
+                          <option value="Full-Day (6-8 Hours)">Full-Day (6-8 Hours)</option>
+                          <option value="Multi-Day Corporate Tournament">Multi-Day Tournament</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Preferred Games & Event Date */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Preferred Games / Setup *
+                        </label>
+                        <select
+                          value={formData.preferredGames}
+                          onChange={(e) => setFormData({ ...formData, preferredGames: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="Snooker & Pool Tournament">Snooker &amp; Pool Tournament</option>
+                          <option value="Esports & PS5 Championship">Esports &amp; PS5 Championship</option>
+                          <option value="Sim Racing Grand Prix">Sim Racing Grand Prix</option>
+                          <option value="Full Multi-Sport Arena Takeover">Full Arena Takeover</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Proposed Date *
+                        </label>
+                        <input
+                          type="date"
+                          required
+                          value={formData.date}
+                          onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Event Notes */}
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                        Catering &amp; Branding Notes (Optional)
+                      </label>
+                      <textarea
+                        rows={2}
+                        placeholder="e.g. Need live leaderboard screen, buffet lunch setup..."
+                        value={formData.specialRequests}
+                        onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
+                        className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#FF1E27] resize-none"
+                      ></textarea>
+                    </div>
+                  </>
+                )}
+
+                {serviceType === "vip" && (
+                  <>
+                    {/* Membership Plan & Primary Game */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Membership Plan *
+                        </label>
+                        <select
+                          value={formData.membershipPlan}
+                          onChange={(e) => setFormData({ ...formData, membershipPlan: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="Gold Cue Pass (15% Off Off-Peak + Priority Booking)">Gold Pass (15% Off)</option>
+                          <option value="Platinum VIP Pass (25% Off + VIP Room Hours + Free Drinks)">Platinum Pass (25% Off + VIP Hours)</option>
+                          <option value="Diamond All-Access Pass (Unlimited Off-Peak + VIP Lounge Privileges)">Diamond Pass (All-Access)</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                          Primary Game Focus *
+                        </label>
+                        <select
+                          value={formData.primaryGame}
+                          onChange={(e) => setFormData({ ...formData, primaryGame: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                        >
+                          <option value="Snooker & Pool">Snooker &amp; Pool</option>
+                          <option value="PS5 & Sim Racing">PS5 &amp; Sim Racing</option>
+                          <option value="Table Tennis & Classics">Table Tennis &amp; Classics</option>
+                          <option value="All-Rounder Gamer">All-Rounder Gamer</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Preferred Start Date */}
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                        Preferred Start Date *
+                      </label>
+                      <input
+                        type="date"
+                        required
+                        value={formData.date}
+                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/10 text-white text-sm focus:outline-none focus:border-[#FF1E27]"
+                      />
+                    </div>
+
+                    {/* Member Notes */}
+                    <div>
+                      <label className="block text-xs font-bold uppercase text-zinc-300 mb-1.5">
+                        Member Notes / Referral Code (Optional)
+                      </label>
+                      <textarea
+                        rows={2}
+                        placeholder="e.g. Referred by member #104..."
+                        value={formData.specialRequests}
+                        onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
+                        className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#FF1E27] resize-none"
+                      ></textarea>
+                    </div>
+                  </>
+                )}
 
                 {/* Submit Action */}
                 <button
@@ -1781,7 +2143,12 @@ export default function Club24LandingPage() {
                   className="w-full py-4 rounded-xl bg-gradient-to-r from-[#FF1E27] to-[#D6131C] text-white font-black text-sm uppercase tracking-wider shadow-[0_0_25px_rgba(255,30,39,0.5)] hover:shadow-[0_0_35px_rgba(255,30,39,0.8)] transition-all flex items-center justify-center gap-2 mt-4"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>Send WhatsApp Booking</span>
+                  <span>
+                    {serviceType === "instant" && "Send WhatsApp Booking"}
+                    {serviceType === "birthday" && "Inquire Squad & Birthday Package"}
+                    {serviceType === "corporate" && "Send Corporate Inquiry"}
+                    {serviceType === "vip" && "Apply for VIP Membership"}
+                  </span>
                 </button>
               </form>
             )}
